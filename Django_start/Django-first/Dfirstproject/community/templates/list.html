@@ -1,0 +1,16 @@
+<body>
+    <div class="content">
+        <h1>아기사자 대나무숲</h1>
+
+        <header>
+            {% include "search.html" %}
+        </header>
+
+        <u1>
+            {% for post in posts %}
+                <li><a href="{% url 'detail' pk=post.id %}">{{post.title}}</a>
+                    <span>{{post.upload_time}}</span></li>
+            {% endfor %}
+        </u1>
+    </div>
+</body>
