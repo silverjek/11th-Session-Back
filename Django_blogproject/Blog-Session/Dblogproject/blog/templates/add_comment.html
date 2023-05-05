@@ -1,0 +1,12 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+<body style="padding:5px; font-family: 'Pretendard';">
+
+
+{% block content %}
+    <h3>New Comment</h3>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="save btn btn-default">등록</button>
+    </form>
+{% endblock %}

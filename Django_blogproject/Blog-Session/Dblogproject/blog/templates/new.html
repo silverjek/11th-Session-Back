@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+<body style="padding:5px; font-family: 'Pretendard';">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,17 +13,15 @@
     {% endblock %}
 </head>
 <body>
-    {% block content %}
     <h1>Creating Blog</h1>
 
-    <form action="{% url 'create' %}" method="post" enctype="multipart/form-data">
+    <form action="{% url 'create' %}" method="post">
 
         {% csrf_token %}
-        {{form.as_p}}
-
+        {{ form.as_p }}
+        해시태그 <input type="text" name="hashtags" placeholder="해시태그 , 로 구분">
         <button type="submit">제출</button>
         
     </form>
-    {% endblock %}
 </body>
 </html>
