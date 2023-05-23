@@ -1,8 +1,16 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
-<body style="padding:5px; font-family: 'Pretendard';">
+{% extends 'base.html' %}
 
-    <h1 style="text-align:center;">블로그 프로젝트</h1>
-    <a href="{% url 'new' %}" style="color:#b10000">새로운 글 만들기</a>
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/test.css' %}">
+<link rel="stylesheet" href="{% static 'css/test2.css' %}">
+<title>Document</title>
+{% endblock %}
+
+{% block content %}
+<h1 style="text-align:center;">블로그 프로젝트</h1>
+<a href="{% url 'new' %}" style="color:#b10000">새로운 글 만들기</a>
     
     {% for blog in blogs.all %}
     
@@ -16,4 +24,5 @@
     </div>
     
     {% endfor %}
-    </body>
+ {% endblock %}
+
