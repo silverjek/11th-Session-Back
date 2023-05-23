@@ -9,6 +9,8 @@
 
 ## 2. Key Changes 
 230504 1:N, M:N 세션 진행 내용 추가했습니다.
+230518 Static & Media 세션 진행 내용 추가했습니다.
+230523 Static & Media 세션 진행 내용에 이어 Nav Bar 수정했습니다.
 
 <br/>
 
