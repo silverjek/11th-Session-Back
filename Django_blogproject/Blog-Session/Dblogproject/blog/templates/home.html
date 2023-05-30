@@ -10,6 +10,13 @@
 
 {% block content %}
 <h1 style="text-align:center;">블로그 프로젝트</h1>
+
+{% if user.is_authenticated %}
+    아이디: {{user.username}} / 닉네임: {{user.nickname}} / 대학: {{user.university}} / 위치: {{user.location}}
+{% endif %}
+
+<br>
+
 <a href="{% url 'new' %}" style="color:#b10000">새로운 글 만들기</a>
     
     {% for blog in blogs.all %}
